@@ -43,3 +43,38 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# ==========================================
+# SENSITIVE FILES & CREDENTIALS (API KEYS, TOKENS, Dsb)
+# ==========================================
+
+# File Environment (Variabel Rahasia)
+.env
+.env.*
+
+# File Keystore & Properti Signing Android (Agar tidak bocor saat rilis)
+*.jks
+*.keystore
+android/key.properties
+android/app/key.properties
+
+# Konfigurasi Firebase (Mencegah Ekspos API Key, App ID, dsb)
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
+macos/Runner/GoogleService-Info.plist
+
+# File opsi Firebase yang ter-generate otomatis 
+lib/firebase_options.dart
+
+# Sertifikat dan Keys Lainnya
+*.key
+*.pem
+*.p12
+*.cer
+*.cert
+secrets/
+
+# Kredensial tambahan (Service Accounts GCP, dsb)
+*ServiceAccount*.json
+*credentials*.json
+*api-*.json

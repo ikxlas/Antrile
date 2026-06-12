@@ -41,7 +41,7 @@ class BusinessRepository {
         });
   }
 
-  // Membuat Lokasi Loket / Layanan Baru (Contoh: "Poli Gigi")
+  // Membuat Lokasi Loket / Layanan Baru 
   Future<void> createQueue(String name) async {
     if (uid == null) return;
     

@@ -320,20 +320,8 @@ class _BusinessDashboardScreenState extends ConsumerState<BusinessDashboardScree
     String statusLabel = isClosed ? 'TUTUP' : 'Aktif';
     Color statusColor = isClosed ? Colors.grey : const Color(0xFF10B981);
     
-    IconData cardIcon = Icons.store;
-    String tag = 'LAYANAN';
-    String nameLower = queue['name'].toString().toLowerCase();
-    
-    if (nameLower.contains('klinik') || nameLower.contains('sehat') || nameLower.contains('gigi') || nameLower.contains('poli')) {
-      cardIcon = Icons.medical_services;
-      tag = 'KESEHATAN';
-    } else if (nameLower.contains('kopi') || nameLower.contains('makan') || nameLower.contains('cafe')) {
-      cardIcon = Icons.local_cafe;
-      tag = 'F&B';
-    } else if (nameLower.contains('barber') || nameLower.contains('cantik') || nameLower.contains('salon')) {
-      cardIcon = Icons.content_cut;
-      tag = 'KECANTIKAN';
-    }
+    const IconData cardIcon = Icons.store;
+    const String tag = 'LAYANAN';
 
     return GestureDetector(
       onTap: () {

@@ -73,6 +73,8 @@ class _BusinessRegistrationScreenState extends ConsumerState<BusinessRegistratio
         imageUrl = widget.queueData!['imageUrl'];
       }
 
+      //Kode ini membuat sebuah Map<String, dynamic> bernama businessData yang berisi data usaha dari form yang diisi pengguna.
+
       final businessData = {
         'name': _nameController.text.trim(),
         'category': _categoryController.text.trim(),
